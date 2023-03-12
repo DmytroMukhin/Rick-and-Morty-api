@@ -1,0 +1,92 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.icon{
+   
+   width: 600px;
+   height: 200px;
+   background: url(PngItem_4380511.png);
+   background-size: cover;
+}
+
+.input{
+   border-radius: 4px;
+   width: 960px;
+   height: 40px;
+
+
+}
+
+/* Characters */
+.characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+    max-width: 1200px;
+    
+     
+
+}
+
+
+
+
+
+
+.character{
+   border: 1px solid rgb(235, 224, 224);
+   border-radius: 4px;
+   margin: 6px;;
+   width: 240px;
+   height: 244px;
+   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+}
+
+.image{
+
+   object-fit: cover;
+   width: 240px;
+   height: 168px;
+}
+
+.species{
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .input{
+       width: 740px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px){
+    .input{
+        width: 570px;
+    }
+    .icon{
+        width: 450px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .input{
+        width: 300px;
+    }
+    .icon{
+        width: 300px;
+        height: 100px;
+    }
+}
