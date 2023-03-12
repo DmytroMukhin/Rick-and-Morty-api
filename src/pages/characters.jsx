@@ -6,8 +6,8 @@ import '../style/characters.css'
 
 function Characters() {
   const [characters, setCharacters] = useState([])
-  const [sessionQuery, setSessionQuery] =  useState(JSON.parse(sessionStorage.getItem('q')))
- 
+  const [sessionQuery, setSessionQuery] =  useState(sessionStorage.getItem('q') || '')
+   
   const sortedCharacters = useMemo(()=>{
     console.log('session', sessionQuery)
     return characters.filter(character => character.name.toLocaleLowerCase().includes(sessionQuery.toLocaleLowerCase()))
@@ -19,7 +19,7 @@ function Characters() {
   }
   
   useEffect(()=>{
-    sessionStorage.setItem('q', JSON.stringify(sessionQuery))
+    sessionStorage.setItem('q', sessionQuery)
   },[sessionQuery])
   
   
